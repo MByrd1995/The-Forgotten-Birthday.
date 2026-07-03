@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Main Quest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+    <h1>🧭 Main Quest</h1>
+
+    <p class="text">
+        Choose the dining path for the evening.
+    </p>
+
+    <button onclick="playClick(); questAccepted('sidequest.html?choice=ramen')">🍜 Ramen</button>
+    <button onclick="playClick(); questAccepted('sidequest.html?choice=sushi')">🍣 Sushi</button>
+    <button onclick="playClick(); questAccepted('sidequest.html?choice=bbq')">🔥 Japanese BBQ</button>
+    <button onclick="playClick(); questAccepted('sidequest.html?choice=surprise')">🎁 Surprise</button>
+</div>
+
+<div id="questOverlay">
+    <h1>✨ QUEST ACCEPTED</h1>
+    <p>The path has been chosen...</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
