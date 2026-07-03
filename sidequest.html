@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Side Quest</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+    <h1>⚔️ Side Quest</h1>
+
+    <p class="text">
+        Choose the adventure after dinner.
+    </p>
+
+    <button onclick="playClick(); questAccepted('reward.html?choice=' + new URLSearchParams(window.location.search).get('choice') + '&activity=cocktails')">
+        🍸 New Cocktail Bar
+    </button>
+
+    <button onclick="playClick(); questAccepted('reward.html?choice=' + new URLSearchParams(window.location.search).get('choice') + '&activity=speakeasy')">
+        🕵️ Secret Speakeasy
+    </button>
+
+    <button onclick="playClick(); questAccepted('reward.html?choice=' + new URLSearchParams(window.location.search).get('choice') + '&activity=rooftop')">
+        🌃 Rooftop View
+    </button>
+
+    <button onclick="playClick(); questAccepted('reward.html?choice=' + new URLSearchParams(window.location.search).get('choice') + '&activity=arcade')">
+        🎮 Arcade Challenge
+    </button>
+</div>
+
+<div id="questOverlay">
+    <h1>✨ QUEST ACCEPTED</h1>
+    <p>Adventure continues...</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
