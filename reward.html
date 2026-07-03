@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reward</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+    <h1>🏆 Reward Unlocked</h1>
+
+    <p class="text" id="summary"></p>
+
+    <p class="text">
+        If you're open to it, I’d like to make it up to you properly.
+    </p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const map = {
+    ramen: "🍜 Ramen",
+    sushi: "🍣 Sushi",
+    bbq: "🔥 Japanese BBQ",
+    surprise: "🎁 Surprise Dining",
+    cocktails: "🍸 New Cocktail Bar",
+    speakeasy: "🕵️ Secret Speakeasy",
+    rooftop: "🌃 Rooftop View",
+    arcade: "🎮 Arcade Challenge"
+};
+
+const dining = params.get("choice");
+const activity = params.get("activity");
+
+document.getElementById("summary").innerHTML =
+`
+<b>Your Quest Path:</b><br><br>
+Main Quest → ${map[dining] || "Not selected"}<br>
+Side Quest → ${map[activity] || "Not selected"}
+`;
+</script>
+
+</body>
+</html>
